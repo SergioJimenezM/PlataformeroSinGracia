@@ -12,7 +12,7 @@ func _ready():
 	
 	pass
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	movimiento.x = 0
 	movimiento.y = 0
 	movimiento.y = GRAVEDAD
@@ -26,7 +26,7 @@ func _physics_process(delta):
 	if(is_on_floor()):
 		salto = true
 	else:
-			salto = false
+		salto = false
 	
 	move_and_slide(movimiento, Vector2(0,-1), 0, 250, 45.0)
 	# *** Parametros del move and slide ***
